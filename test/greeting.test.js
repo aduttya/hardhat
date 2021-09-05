@@ -10,13 +10,13 @@ describe('testing Greeting contract',async()=>{
 
         greeting = await Greeting.deploy('hi');
 
-        console.log(greeting.address)
+        console.log('Deployed address is :',greeting.address)
 
     })
 
     it('setting the greeting',async ()=>{
         await greeting.setGreeting('second greet').then(function(results){
-            console.log(results)
+            console.log('The transaction hash is : ',results)
         })
     })
 
